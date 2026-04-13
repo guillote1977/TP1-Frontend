@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Definición metadatos, linkeo a hojas de estilo y fonts google -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio Personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- contenido de la página -->
+
+<body class="page-mailen">
+    <!-- encabezado -->
+    <header id="Home">
+        <h1>MI PORTFOLIO PERSONAL</h1>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#tarjetas">Mis Proyectos</a></li>
+            <li><a href="#habilidades">Mis Habilidades</a></li>
+            <li><a href="#peliculas">Películas y Series favoritas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="sobre-mi">
+            <h2>SOBRE MI</h2>
+            <img src="img/avatar-mailen.png" alt="Avatar de mi foto de perfil">
+            <p>¡Hola! Soy Mailén. Trabajo hace varios años en el sector administrativo de salud, donde aprendí a
+                organizar el caos y trabajar bajo presión. Hace poco decidí dar un giro hacia el mundo de la tecnología.
+                Actualmente estoy enfocada en combinar mi aprendizaje en el sector IT con mi trabajo en salud para
+                buscar soluciones digitales inteligentes que optimicen los procesos del día a día. Cuando me alejo de
+                las pantallas me dedico a pintar, mirar alguna serie y pasar tiempo con mi perrito Nilo.</p>
+        </section>
+
+        <!-- Sección de proyectos, posteriormente podré ampliar la sección con nuevas tarjetas -->
+        <section id="tarjetas">
+            <h2>Mis Proyectos en IT</h2>
+            <div class="flex-tarjetas-proyectos">
+                <article class="tarjeta">
+                    <img src="img/proyect-1.jpg" alt="Imagen del proyecto web para local">
+                    <h3>WEB PARA LOCAL</h3>
+                    <p>Aplicación web estática desarrollada en HTML, CCS y Bootstrap para un local comercial.</p>
+                </article>
+                <article class="tarjeta">
+                    <img src="img/proyect-2.jpg" alt="Imagen del proyecto portfolio personal">
+                    <h3>PORTFOLIO</h3>
+                    <p>SPA full stack desarrollada en Angular y Java con Springboot y MySQL.</p>
+                </article>
+                <article class="tarjeta">
+                    <img src="img/proyect-3.png" alt="Imagen ilustrativa app agencia de vuelos">
+                    <h3>APP AGENCIA DE VUELOS</h3>
+                    <p>Proyecto implementación de Microservicios, operaciones CRUD en JAVA, consumo de API propia a
+                        nivel lógico.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>MIS HABILIDADES</h2>
+            <div class="contenedor-tabla">
+                <table class="tabla-habilidades">
+                    <thead>
+                        <tr>
+                            <th>Conocimientos</th>
+                            <th>Por aprender</th>
+                            <th>Hobbies</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML- CSS- Bootstrap</td>
+                            <td>React</td>
+                            <td>Pintar</td>
+                        </tr>
+                        <tr>
+                            <td>Java Básico - Angular</td>
+                            <td>Java Avanzado</td>
+                            <td>Mirar series</td>
+                        </tr>
+                        <tr>
+                            <td>MySQL</td>
+                            <td>MongoDB</td>
+                            <td>Codear</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="peliculas">
+            <h2>Películas y Series favoritas</h2>
+            <div class="flex-tarjetas-peliculas">
+                <article class="tarjeta">
+                    <h3>GAME OF THRONES</h3>
+                    <img src="img/pelicula-1.avif" alt="Póster promocional oficial de la serie Game of Thrones en HBO.">
+                    <p> Una obra maestra de fantasía épica. Me fascina la complejidad de sus personajes, la intriga
+                        política constante por el Trono de Hierro y cómo ninguna lealtad está garantizada. Una narrativa
+                        coral impresionante.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>BREAKING BAD</h3>
+                    <img src="img/pelicula3BB.jpg" alt="Póster promocional oficial de la serie Breaking Bad.">
+                    <p> La transformación de Walter White es arte puro. La serie mantiene una tensión insoportable de
+                        principio a fin, mostrando cómo las decisiones desesperadas llevan a consecuencias
+                        irreversibles. Guion perfecto.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>EFECTO MARIPOSA</h3>
+                    <img src="img/pelicula-3.avif" alt="Póster oficial de la portada de la película Efecto Mariposa.">
+                    <p> Una película que explora de forma fascinante la teoría del caos y cómo pequeños cambios en el
+                        pasado pueden reescribir drásticamente el presente. Una historia atrapante sobre las
+                        consecuencias de intentar controlar el destino.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de contacto, posteriormente podré conectarlo a un servidor para recopilar datos -->
+        <section id="contacto">
+            <h2>CONTACTO</h2>
+            <form action="#">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="tel">Teléfono:</label>
+                <input type="tel" id="tel" name="tel">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required
+                    placeholder="¡Dejame tu mensaje o comentario acá!"></textarea>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Mailén Juárez. Todos los derechos reservados.</p>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/mailenjuarez/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/mailenjuarez1" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeveloPET Friendly - TP1</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; flex-wrap: wrap;">
-        <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-            <img src="img/logodev.jpeg" alt="Logo DeveloPET Friendly" style="max-height: 70px; border-radius: 8px;">
-            <h1 style="margin: 0; font-size: 1.5rem;">Grupo nro 4, Com. D</h1>
+<body class="page-home">
+    <header class="site-header">
+        <div class="site-brand">
+            <a class="brand" href="index.html" aria-label="Ir al inicio">
+                <img src="img/logodev.jpeg" alt="Logo DeveloPET Friendly">
+                <span class="brand-title">Grupo nro 4, Com. D</span>
+            </a>
         </div>
 
-        <nav style="display: flex; align-items: center; gap: 20px;">
-            <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
-                <li><a href="index.html">Inicio</a></li>
+        <nav class="site-nav" aria-label="Navegación principal">
+            <ul class="site-links">
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
                 <li><a href="bitacora.html">Bitácora</a></li>
             </ul>
-            <button id="btn-theme" style="margin-left: 20px;">Modo Oscuro</button>
+            <button id="btn-theme" type="button">Modo Oscuro</button>
         </nav>
     </header>
 
@@ -30,28 +34,28 @@
         </section>
 
         <section class="team-cards">
-            <article class="card">
-                <img src="img/avatar-vero.jpg" alt="Avatar de Verónica Greco">
+            <article class="card card--vero">
+                <img src="img/avatar-vero.jpeg" alt="Avatar de Verónica Greco" onerror="this.onerror=null;this.src='img/profile.jpg';">
                 <h3>Verónica Greco</h3>
                 <p>Bioquímica y desarrolladora. Enfocada en soluciones para entornos industriales y de laboratorio.</p>
                 <a href="veronica.html" class="btn-perfil">Ver Perfil</a>
             </article>
 
-            <article class="card">
-                <img src="img/avatar-mailen.jpg" alt="Avatar de Mailén">
+            <article class="card card--mailen">
+                <img src="img/avatar-mailen.png" alt="Avatar de Mailén" onerror="this.onerror=null;this.src='img/profile.jpg';">
                 <h3>Mailén</h3>
                 <p>Administración en salud y tecnología. Mamá del perrito Nilo y fan de Angular.</p>
                 <a href="mailen.html" class="btn-perfil">Ver Perfil</a>
             </article>
 
-            <article class="card">
-                <img src="img/avatar-braian.jpg" alt="Avatar de Braian Perea">
+            <article class="card card--braian">
+                <img src="img/avatar-braian.png" alt="Avatar de Braian Perea" onerror="this.onerror=null;this.src='img/profile.jpg';">
                 <h3>Braian Perea</h3>
                 <p>Apasionado de los datos, el gaming y el streaming. Creador de dashboards dinámicos.</p>
                 <a href="braian.html" class="btn-perfil">Ver Perfil</a>
             </article>
 
-          <article class="card">
+          <article class="card card--guillermo">
                 <img src="img/profile.jpg" alt="Avatar de Guillermo">
                 <h3>Guillermo</h3>
                 <p>Desarrollador Full Stack & IA. Amante de la automatización y la acuariofilia.</p>
