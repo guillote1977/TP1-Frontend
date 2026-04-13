@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Personal</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="page-veronica">
+    <div class="contenedor">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Verónica Greco</h1>
+        </header>
+
+        <!-- NAV: Barra de navegación principal -->
+        <!--Pendientes: Implementar Menú hamburguesa con JS-->
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#tarjetas">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN -->
+        <main>
+            <!-- SOBRE MI: En esta sección cuento un poco sobre mi ocupación, mis intereses y mis aspiraciones en el estudio de esta tecnicatura-->
+            <section id="sobre-mi">
+                <h2><img src="img/matraz.png" alt="Icono" class="icono-h2">Sobre mí</h2>
+                <div class="sobre-mi-contenido">
+                    <p>Mi nombre es Verónica, soy bioquímica y me desempeñé siempre en el área industrial, guiada por mi
+                        interés en la ciencia y la biología. Desde hace tres años me estoy formando en el mundo de la
+                        programación mediante cursos y capacitaciones, y actualmente curso el segundo año de la
+                        Tecnicatura en Desarrollo de Software. Mi objetivo es fusionar conocimientos científicos y
+                        programación para crear soluciones innovadoras que tengan un impacto real y se adapten a las
+                        realidades que experimento en mi día a día.</p>
+                    <img src="img/avatar-vero.jpeg" alt="Imagen de perfil">
+                </div>
+            </section>
+
+            <!-- TARJETAS: En esta sección incorporé dos proyectos que tengo en mente desde que empecé a cursar la materia, por ahora sólo son ideas hasta que obtenga las herramientas necesarias para llevarlos a cabo.-->
+            <!--Pendientes: Agregar mayor descripción de los proyectos y enlaces funcionales-->
+            <section id="tarjetas">
+                <h2><img src="img/proyecto.png" alt="Icono" class="icono-h2">Proyectos</h2>
+                <div class="tarjetas-container">
+                    <div class="tarjeta">
+                        <img src="img/proyecto1.jpg" alt="Proyecto 1">
+                        <p><i>Sistema de gestión para laboratorio orientado a reemplazar el uso de Excel, permitiendo
+                                controlar stock, registrar resultados, gestionar materias primas y generar informes.
+                                Surge a partir de necesidades reales en un entorno industrial.</i></p>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="img/proyecto2.jpg" alt="Proyecto 2">
+                        <p><i>Aplicación para digitalizar protocolos de laboratorio mediante checklists, permitiendo
+                                estandarizar procesos, validar tareas y mejorar la trazabilidad. Orientada a optimizar
+                                la organización y reducir errores en entornos de trabajo controlados.</i></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HABILIDADES: En esta sección describo algunas de las habilidades que adquirí estudiando esta carrera y aquellas que tengo pendientes o en proceso de aprendizaje. -->
+            <section id="habilidades">
+                <h2><img src="img/habil.png" alt="Icono" class="icono-h2">Habilidades</h2>
+                <ul>
+                    <li><strong>Lenguajes:</strong> Java, Python, C#, Kotlin</li>
+                    <li><strong>Desarrollo Web:</strong> HTML, CSS</li>
+                    <li><strong>Bases de datos:</strong> MySQL</li>
+                    <li><strong>Pendientes de aprender:</strong> Node, React, bases de datos no relacionales</li>
+                </ul>
+            </section>
+
+            <!-- CONTACTO: En esta sección les dejo un formulario para que puedan ponerse en contacto conmigo. -->
+            <!--Pendientes: Validar los datos con JS y enviar correos automáticamente-->
+            <section id="contacto">
+                <h2><img src="img/formulario.png" alt="Icono" class="icono-h2">Contacto</h2>
+                <form>
+                    <label>Nombre:</label><input type="text" name="nombre" required>
+                    <label>Apellido:</label><input type="text" name="apellido" required>
+                    <label>Email:</label><input type="email" name="email" required>
+                    <label>Teléfono:</label><input type="tel" name="telefono">
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+
+            <!-- PELÍCULAS: Como no soy habitué de ver películas, pero sí series, dejé aquí lo que para mí son las mejores de la historia. -->
+            <section id="peliculas">
+                <h2><img src="img/video.png" alt="Icono" class="icono-h2">Mis Películas/ Series Favoritas</h2>
+                <div class="peliculas-container">
+                    <div class="pelicula">
+                        <img src="img/pelicula1.jpg" alt="Película 1">
+                        <h3>The Shawshank Redemption</h3>
+                        <p>Drama que sigue la historia de un hombre condenado injustamente a prisión, donde forma una
+                            profunda amistad con otro recluso, que le permite sobrellevar la dureza de la vida en la
+                            cárcel.</p>
+                    </div>
+                    <div class="pelicula">
+                        <img src="img/pelicula2.jpg" alt="Película 2">
+                        <h3>Game of Thrones</h3>
+                        <p>Serie de fantasía épica ambientada en los continentes de Westeros y Essos, donde distintas
+                            familias nobles luchan por el poder y el control del Trono de Hierro.</p>
+                    </div>
+                    <div class="pelicula">
+                        <img src="img/pelicula3BB.jpg" alt="Película 3">
+                        <h3>Breaking bad</h3>
+                        <p>Walter White es un profesor de química que, tras recibir un diagnóstico de cáncer, comienza a
+                            adentrarse en el mundo del crimen.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER: Esta sección contiene los enlaces hacia mis redes sociales -->
+        <!--Pendientes: Añadir enlaces rápidos a otras secciones de la página-->
+        <footer>
+            <p> Mis Redes Sociales</p>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://outlook.com" target="_blank">
+                    <img src="img/email.png" alt="EMail">
+                </a>
+                <a href="https://github.com" target="_blank">
+                    <img src="img/github.png" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="img/linkedin.png" alt="LinkedIn">
+                </a>
+                <p>&copy; 2026 Verónica Greco. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
