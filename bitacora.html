@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora de Desarrollo - DeveloPET Friendly - Grupo nro 4, Com. D</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; flex-wrap: wrap;">
-        <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-            <img src="img/logodev.jpeg" alt="Logo DeveloPET Friendly" style="max-height: 70px; border-radius: 8px;">
-            <h1 style="margin: 0; font-size: 1.5rem;">Grupo nro 4, Com. D</h1>
+<body class="page-bitacora">
+    <header class="site-header">
+        <div class="site-brand">
+            <a class="brand" href="index.html" aria-label="Ir al inicio">
+                <img src="img/logodev.jpeg" alt="Logo DeveloPET Friendly">
+                <span class="brand-title">Grupo nro 4, Com. D</span>
+            </a>
         </div>
         
-        <nav style="display: flex; align-items: center; gap: 20px;">
-            <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
+        <nav class="site-nav" aria-label="Navegación principal">
+            <ul class="site-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="bitacora.html">Bitácora</a></li>
+                <li><a href="bitacora.html" aria-current="page">Bitácora</a></li>
             </ul>
-            <button id="btn-theme" style="margin-left: 20px;">Modo Oscuro</button>
+            <button id="btn-theme" type="button">Modo Oscuro</button>
         </nav>
     </header>
 
     <main>
         <section class="section bitacora-container">
             <h2>Diario de Desarrollo del Equipo</h2>
-            <p style="text-align: center; margin-bottom: 30px;">En esta sección documentamos nuestro proceso de trabajo, los obstáculos superados y la evolución del proyecto.</p>
+            <p class="lead">En esta sección documentamos nuestro proceso de trabajo, los obstáculos superados y la evolución del proyecto.</p>
 
             <article class="bitacora-entry">
                 <h3>📅 [08/04/2026] -🎨 Decisiones de diseño tomadas</h3>
