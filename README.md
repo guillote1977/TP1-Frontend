@@ -3,16 +3,16 @@
 **Materia:** Proyecto Web  
 **Institución:** IFTS N.°29  
 
-**Enlace al Proyecto Desplegado (Vercel):** [….]
+**Enlace al Proyecto Desplegado (Vercel):** [https://tp1frontend.vercel.app/]
 
 ## Descripción del Proyecto
 Este proyecto es una presentación web colaborativa desarrollada por el equipo "DeveloPET Friendly". El objetivo principal fue crear una portada grupal que integre los perfiles profesionales de cada integrante, manteniendo una estructura de navegación coherente, diseño adaptable (Responsive Design) mediante CSS Grid, y aplicando buenas prácticas de organización de archivos. Se incluye además una sección de Bitácora para documentar las decisiones de diseño y las herramientas utilizadas durante el proceso.
 
 ## Integrantes
-- Verónica Greco - (LINK)
-- Mailén - (LINK)
-- Braian Perea - (LINK)
-- Guillermo - (LINK)
+- Verónica Greco - ([LINK](https://tp1frontend.vercel.app/veronica.html)
+- Mailén - ([LINK](https://tp1frontend.vercel.app/mailen.html)
+- Braian Perea - ([LINK](https://tp1frontend.vercel.app/braian.html)
+- Guillermo - ([LINK](https://tp1frontend.vercel.app/guillermo.html)
   
 ## Tecnologías Utilizadas
 - HTML5 (Semántica estructural)
