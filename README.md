@@ -40,6 +40,9 @@ Se respetó el requisito de mantener los archivos HTML en la raíz, separando l�
 - **Tipografías:**
   - `Poppins` (Principal, elegante y redondeada): [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins)
   - `Roboto` (Fallback y lectura fluida): [Google Fonts - Roboto](https://fonts.google.com/specimen/Roboto)
+  - `Ubuntu` (Principal, moderna, limpia y muy legible): https://fonts.google.com/specimen/Ubuntu
+  - `Delius` (Amigable, manuscrita y relajada, ideal para un estilo cálido y cercano): https://fonts.google.com/specimen/Delius
+  - `EB Garamond` (Elegante, clásica y sofisticada, ideal para textos con estilo editorial): https://fonts.google.com/specimen/EB+Garamond
 - **Privacidad y Avatares:** Se utilizaron avatares ilustrativos y fotos representativas de mascotas/hobbies para preservar la identidad personal en un repositorio público, tal como lo sugiere la consigna.
 
 ## JavaScript y Funcionalidades Dinámicas
@@ -51,8 +54,16 @@ Se implementaron funciones en JavaScript puro para mejorar la experiencia de usu
 ![Captura del Modo Oscuro activado](img/Captura-oscura.jpg)
 ![Captura del Modal Lightbox ](img/Captura-clara.jpg)
 
+- **Función en veronica.html:** En la sección **Mi Manada**, se implementó una funcionalidad con JS que permite, al hacer clic sobre las imágenes de las mascotas, ampliar la fotografía seleccionada, modificar su borde visualmente y activar una animación decorativa de una patita que aparece desde el punto del clic.
+
+>**Capturas de pantalla:
+![Vista del efecto](img/Captura-mimanada.jpeg)
+
+
+
+
 ## Uso de Inteligencia Artificial (IA)
 - **Herramientas utilizadas:** Google Gemini. NotebookLM
-- **Uso en Contenido y Código:** - **Refactorización CSS:** Se utilizó IA para analizar hojas de estilo distintas (a raíz de la unificación de perfiles) y unificarlas en un único archivo `styles.css`. La IA ayudó a identificar clases duplicadas, agrupar selectores de variables globalesy estandarizar el diseño responsivo (Breakpoints de 900px y 1200px requeridos por el TP).
+- **Uso en Contenido y Código:** - **Refactorización CSS:** Se utilizó IA para analizar hojas de estilo distintas (a raíz de la unificación de perfiles) y unificarlas en un único archivo `styles.css`. La IA ayudó a identificar clases duplicadas, agrupar selectores de variables globales y estandarizar el diseño responsivo (Breakpoints de 900px y 1200px requeridos por el TP).
   - **Lógica JavaScript:** Gemini asistió en la creación de la lógica para el Modal Lightbox, sugiriendo la mejor forma de iterar sobre una colección de imágenes con `querySelectorAll` y aplicar *Event Listeners* sin necesidad de usar librerías externas.
 - **Generación de Imágenes:** *[Se utilizó Gemini PRO para la generación de los avatares de los perfiles]*.
