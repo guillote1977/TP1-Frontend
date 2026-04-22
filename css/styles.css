@@ -16,7 +16,7 @@
     --primary-color: #0f172a;
     --hover-color: #111827;
     --secondary-color: #6366f1;
-    
+
     /* Variables del portafolio individual */
     --accent-color: #22c55e;
     --light-bg: rgba(15, 23, 42, 0.04);
@@ -43,7 +43,8 @@ body.dark-mode {
    2. ESTILOS BASE Y ESTRUCTURA (STICKY FOOTER)
    ========================================= */
 body {
-    font-family: 'Poppins', 'Roboto', sans-serif; /* Poppins principal, Roboto fallback */
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    /* Poppins principal, Roboto fallback */
     background-color: var(--bg-color);
     background-image:
         radial-gradient(1200px 600px at 10% 10%, rgba(99, 102, 241, 0.16), transparent 60%),
@@ -52,15 +53,16 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
-    
+
     /* Sticky Footer: Empuja el footer siempre abajo */
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 main {
-    flex: 1; /* Ocupa el espacio restante */
+    flex: 1;
+    /* Ocupa el espacio restante */
     padding: 1.5rem 0 2.5rem;
 }
 
@@ -87,7 +89,7 @@ body.page-braian {
     --accent-2: #7a29ff;
     --text: #e6f1ff;
     background: radial-gradient(1200px 600px at 20% 0%, #0f1730 0%, var(--bg) 60%) fixed,
-                linear-gradient(160deg, var(--bg-2), var(--bg));
+        linear-gradient(160deg, var(--bg-2), var(--bg));
     color: var(--text);
     font-family: "Ubuntu", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
     overflow-x: hidden;
@@ -294,65 +296,71 @@ body.page-veronica .tarjeta img {
 }
 
 body.page-veronica #mi-manada .manada-contenedor {
-  display: flex;
-  justify-content: space-around;
-  gap: 1.875rem; 
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    gap: 1.875rem;
+    flex-wrap: wrap;
 }
 
 body.page-veronica #mi-manada .mascota {
-  text-align: center;
-  position: relative;
+    text-align: center;
+    position: relative;
 }
 
 body.page-veronica #mi-manada .mascota img {
-  width: 11rem;
-  height: 14rem;  
-  border-radius: 1rem; /* esquinas suaves */
+    width: 11rem;
+    height: 14rem;
+    border-radius: 1rem;
+    /* esquinas suaves */
 }
 
 body.page-veronica #mi-manada .mascota p {
-  margin-top: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 body.page-veronica #mi-manada .mascota img.latido {
-  animation: latido 1s ease;
-  box-shadow: 0 0 20px rgba(13, 212, 73, 0.6);
+    animation: latido 1s ease;
+    box-shadow: 0 0 20px rgba(13, 212, 73, 0.6);
 }
 
 @keyframes latido {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .patita {
-  position: absolute;
-  font-size: 2.5rem;
-  pointer-events: none;
-  animation: flotar 1s ease forwards;
-  text-shadow: 0 0 8px black;
-  opacity: 1;
-  }
+    position: absolute;
+    font-size: 2.5rem;
+    pointer-events: none;
+    animation: flotar 1s ease forwards;
+    text-shadow: 0 0 8px black;
+    opacity: 1;
+}
 
 @keyframes flotar {
-  0% {
-    opacity: 1;
-    transform: translateY(0) scale(1.2); /* 👈 arranca más visible */
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-50px) scale(1.5);
-  }
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1.2);
+        /* 👈 arranca más visible */
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1.5);
+    }
 }
 
 body.page-veronica form {
@@ -701,6 +709,35 @@ body.page-mailen footer {
     margin-top: 0;
 }
 
+/* Validación del formulario */
+body.page-mailen .input-error {
+    border: 2px solid #e74c3c;
+    background-color: rgba(231, 76, 60, 0.08);
+}
+
+body.page-mailen .input-ok {
+    border: 2px solid #27ae60;
+    background-color: rgba(39, 174, 96, 0.08);
+}
+
+body.page-mailen .msg-error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+body.page-mailen .form-exito {
+    color: #27ae60;
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+body.page-mailen section {
+    scroll-margin-top: 60px;
+}
+
 @media (max-width: 600px) {
     body.page-mailen nav ul {
         flex-direction: row;
@@ -726,6 +763,7 @@ body.page-mailen footer {
     body.page-mailen #contacto h2 {
         margin-left: 0;
     }
+
 }
 
 body.page-braian a {
@@ -750,7 +788,7 @@ body.page-braian header .brand-title {
 body.page-braian .navbar {
     backdrop-filter: saturate(140%) blur(6px);
     border-bottom: 1px solid rgba(122, 41, 255, 0.25);
-    box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.06) inset, 0 6px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.06) inset, 0 6px 30px rgba(0, 0, 0, 0.35);
 }
 
 body.page-braian .navbar .nav-link {
@@ -778,7 +816,7 @@ body.page-braian section h2 {
 body.page-braian .card.bg-dark {
     background-color: #0f1a2b !important;
     border: 1px solid rgba(0, 229, 255, 0.12);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
 body.page-braian .card.bg-dark .card-title {
@@ -824,20 +862,25 @@ body.page-braian .avatar {
         height: auto !important;
         width: auto;
     }
+
     body.page-braian header .brand-title {
         font-size: 1rem;
     }
+
     body.page-braian .navbar .navbar-brand span {
         font-size: 1rem;
     }
+
     body.page-braian section {
         padding-top: 2rem;
         padding-bottom: 2rem;
         scroll-margin-top: 72px;
     }
+
     body.page-braian #habilidades .table {
         font-size: 0.9rem;
     }
+
     body.page-braian #contacto .btn {
         width: 100%;
     }
@@ -847,6 +890,7 @@ body.page-braian .avatar {
     body.page-braian header img {
         max-height: 72px;
     }
+
     body.page-braian section {
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -873,7 +917,7 @@ body:not(.page-braian) .container {
 
 .section {
     padding: 4rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
@@ -904,7 +948,8 @@ body:not(.page-braian) .container {
 /* Variante Header Portafolio (Clase .header) */
 .header {
     display: flex;
-    justify-content: center; /* Centra el logo en el portafolio */
+    justify-content: center;
+    /* Centra el logo en el portafolio */
     align-items: center;
     background-color: var(--primary-color);
     color: #ffffff;
@@ -972,9 +1017,11 @@ body.dark-mode .paw-print {
         transform: translate3d(0, -40px, 0) rotate(var(--paw-rot, 0deg));
         opacity: 0;
     }
+
     12% {
         opacity: var(--paw-opacity, 0.8);
     }
+
     100% {
         transform: translate3d(var(--paw-drift, 0px), calc(100vh + 120px), 0) rotate(calc(var(--paw-rot, 0deg) + 80deg));
         opacity: 0;
@@ -1063,9 +1110,17 @@ body.dark-mode .loader-dot {
     background: rgba(231, 234, 243, 0.16);
 }
 
-.loader-dot.is-red { background: rgba(239, 68, 68, 0.75); }
-.loader-dot.is-yellow { background: rgba(245, 158, 11, 0.75); }
-.loader-dot.is-green { background: rgba(34, 197, 94, 0.75); }
+.loader-dot.is-red {
+    background: rgba(239, 68, 68, 0.75);
+}
+
+.loader-dot.is-yellow {
+    background: rgba(245, 158, 11, 0.75);
+}
+
+.loader-dot.is-green {
+    background: rgba(34, 197, 94, 0.75);
+}
 
 .loader-title {
     font-weight: 700;
@@ -1118,21 +1173,40 @@ body.dark-mode .loader-bar {
 }
 
 @keyframes loader-bar {
-    0% { transform: translateX(-120%); }
-    100% { transform: translateX(260%); }
+    0% {
+        transform: translateX(-120%);
+    }
+
+    100% {
+        transform: translateX(260%);
+    }
 }
 
 @keyframes loader-scan {
-    0% { transform: translate3d(-18%, -18%, 0) rotate(0.0001deg); }
-    100% { transform: translate3d(18%, 18%, 0) rotate(0.0001deg); }
+    0% {
+        transform: translate3d(-18%, -18%, 0) rotate(0.0001deg);
+    }
+
+    100% {
+        transform: translate3d(18%, 18%, 0) rotate(0.0001deg);
+    }
 }
 
 @keyframes loader-blink {
-    0%, 49% { opacity: 1; }
-    50%, 100% { opacity: 0; }
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .loader-scan,
     .loader-bar::before,
     .loader-cursor {
@@ -1281,7 +1355,7 @@ body.dark-mode #btn-theme:hover {
 /* Grilla adaptable requerida por el TP */
 .team-cards {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: 30px;
     padding: 20px;
     max-width: 1200px;
@@ -1412,6 +1486,7 @@ body.dark-mode .card--vero:focus-within h3::after {
             0 0,
             0 0;
     }
+
     100% {
         background-position:
             120px 260px,
@@ -1426,6 +1501,7 @@ body.dark-mode .card--vero:focus-within h3::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .card--vero:hover::after,
     .card--vero:focus-within::after {
         animation: none;
@@ -1529,6 +1605,7 @@ body.dark-mode .card--braian:focus-within h3::after {
             0 0,
             0 0;
     }
+
     100% {
         background-position:
             0 0,
@@ -1541,6 +1618,7 @@ body.dark-mode .card--braian:focus-within h3::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .card--braian:hover::after,
     .card--braian:focus-within::after {
         animation: none;
@@ -1661,6 +1739,7 @@ body.dark-mode .card--guillermo:focus-within h3::after {
             0 0,
             0 0;
     }
+
     100% {
         background-position:
             120px -260px,
@@ -1679,6 +1758,7 @@ body.dark-mode .card--guillermo:focus-within h3::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .card--guillermo:hover::after,
     .card--guillermo:focus-within::after {
         animation: none;
@@ -1760,7 +1840,7 @@ body.dark-mode .card--mailen {
 
 .card--mailen:hover h3::after,
 .card--mailen:focus-within h3::after {
-    content: "🐶 + Angular + salud → orden";
+    content: "🐶 + Tecnología + salud → orden";
     display: block;
     margin-top: 0.25rem;
     font-size: 0.78rem;
@@ -1786,6 +1866,7 @@ body.dark-mode .card--mailen:focus-within h3::after {
             0 0,
             0 0;
     }
+
     100% {
         background-position:
             120px 260px,
@@ -1799,6 +1880,7 @@ body.dark-mode .card--mailen:focus-within h3::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .card--mailen:hover::after,
     .card--mailen:focus-within::after {
         animation: none;
@@ -2002,14 +2084,16 @@ body.dark-mode .roadmap-tooltip::before {
 }
 
 /* Tarjetas Proyectos y Películas/Discos */
-.tarjetas-grid, .peliculas-grid {
+.tarjetas-grid,
+.peliculas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.tarjeta, .pelicula-card {
+.tarjeta,
+.pelicula-card {
     background: var(--card-bg);
     border-radius: 8px;
     overflow: hidden;
@@ -2017,31 +2101,37 @@ body.dark-mode .roadmap-tooltip::before {
     transition: var(--transition);
 }
 
-.tarjeta:hover, .pelicula-card:hover {
+.tarjeta:hover,
+.pelicula-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.tarjeta img, .pelicula-card img {
+.tarjeta img,
+.pelicula-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     transition: var(--transition);
-    cursor: pointer; /* Lightbox */
+    cursor: pointer;
+    /* Lightbox */
 }
 
-.tarjeta:hover img, .pelicula-card:hover img {
+.tarjeta:hover img,
+.pelicula-card:hover img {
     transform: scale(1.05);
     opacity: 0.8;
 }
 
-.tarjeta h3, .pelicula-card h3 {
+.tarjeta h3,
+.pelicula-card h3 {
     padding: 1rem 1rem 0.5rem;
     color: var(--primary-color);
     font-size: 1.2rem;
 }
 
-.tarjeta p, .pelicula-card p {
+.tarjeta p,
+.pelicula-card p {
     padding: 0 1rem 1rem;
     font-size: 0.95rem;
 }
@@ -2061,14 +2151,15 @@ body.dark-mode .roadmap-tooltip::before {
     color: #ffffff;
 }
 
-.habilidades-tabla th, .habilidades-tabla td {
+.habilidades-tabla th,
+.habilidades-tabla td {
     padding: 1rem;
     text-align: left;
     border: 1px solid #ddd;
 }
 
 .habilidades-tabla tbody tr:hover {
-    background-color: rgba(0,0,0,0.02);
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 /* Formulario */
@@ -2128,7 +2219,7 @@ footer {
     padding: 20px 0;
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(99, 102, 241, 0.30));
     color: #ffffff;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 .footer-content {
@@ -2168,7 +2259,7 @@ footer {
     max-width: 90%;
     max-height: 85vh;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     animation: zoomIn 0.3s ease;
 }
 
@@ -2183,8 +2274,13 @@ footer {
 }
 
 @keyframes zoomIn {
-    from {transform: scale(0.8)} 
-    to {transform: scale(1)}
+    from {
+        transform: scale(0.8)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 /* =========================================
@@ -2208,11 +2304,15 @@ body.dark-mode footer {
    ========================================= */
 /* Breakpoints exigidos por el TP para la portada */
 @media (min-width: 900px) {
-    .team-cards { grid-template-columns: repeat(2, 1fr); }
+    .team-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1200px) {
-    .team-cards { grid-template-columns: repeat(4, 1fr); }
+    .team-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* Ajustes para móviles generales */
@@ -2221,17 +2321,22 @@ body.dark-mode footer {
         flex-direction: column;
         gap: 15px;
     }
+
     .site-nav {
         justify-content: center;
     }
+
     .sobre-mi-content {
         flex-direction: column;
         text-align: center;
     }
-    .habilidades-tabla th, .habilidades-tabla td {
+
+    .habilidades-tabla th,
+    .habilidades-tabla td {
         padding: 0.5rem;
         font-size: 0.9rem;
     }
+
     .footer-content {
         flex-direction: column;
         justify-content: center;

@@ -206,4 +206,148 @@ document.addEventListener('click', (event) => {
     window.setTimeout(() => {
         window.location.href = url.toString();
     }, 2400);
+
 });
+
+/* Validación del formulario - MAI */
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("#contacto form");
+        if (!form) return;
+
+        function mostrarError(input, mensaje) {
+            input.classList.add("input-error");
+            input.classList.remove("input-ok");
+
+            let error = input.parentElement.querySelector(".msg-error");
+            if (!error) {
+                error = document.createElement("span");
+                error.classList.add("msg-error");
+                input.insertAdjacentElement("afterend", error);
+            }
+            error.textContent = mensaje;
+        }
+
+        function mostrarOk(input) {
+            input.classList.remove("input-error");
+            input.classList.add("input-ok");
+
+            const error = input.parentElement.querySelector(".msg-error");
+            if (error) error.remove();
+        }
+
+        function validarNombre(input) {
+            const val = input.value.trim();
+            if (val === "") {
+                mostrarError(input, "Este campo es obligatorio.");
+                return false;
+            }
+            if (val.length < 2) {
+                mostrarError(input, "Ingresá al menos 2 caracteres.");
+                return false;
+            }
+            mostrarOk(input);
+            return true;
+        }
+
+        function validarEmail(input) {
+            const val = input.value.trim();
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (val === "") {
+                mostrarError(input, "El email es obligatorio.");
+                return false;
+            }
+            if (!regex.test(val)) {
+                mostrarError(input, "Ingresá un email válido (ej: nombre@correo.com).");
+                return false;
+            }
+            mostrarOk(input);
+            return true;
+        }
+
+        function validarTel(input) {
+            const val = input.value.trim();
+            // Opcional, pero si completa debe tener solo números, espacios, +, -
+            if (val !== "" && !/^[\d\s\+\-]{7,20}$/.test(val)) {
+                mostrarError(input, "Ingresá un teléfono válido (solo números).");
+                return false;
+            }
+            mostrarOk(input);
+            return true;
+        }
+
+        function validarMensaje(input) {
+            const val = input.value.trim();
+            if (val === "") {
+                mostrarError(input, "El mensaje no puede estar vacío.");
+                return false;
+            }
+            if (val.length < 10) {
+                mostrarError(input, "El mensaje debe tener al menos 10 caracteres.");
+                return false;
+            }
+            mostrarOk(input);
+            return true;
+        }
+
+        /* Validar en tiempo real */
+        const nombre = form.querySelector("#m-nombre");
+        const apellido = form.querySelector("#m-apellido");
+        const email = form.querySelector("#m-email");
+        const tel = form.querySelector("#m-tel");
+        const mensaje = form.querySelector("#m-mensaje");
+
+        nombre?.addEventListener("blur", () => validarNombre(nombre));
+        apellido?.addEventListener("blur", () => validarNombre(apellido));
+        email?.addEventListener("blur", () => validarEmail(email));
+        tel?.addEventListener("blur", () => validarTel(tel));
+        mensaje?.addEventListener("blur", () => validarMensaje(mensaje));
+
+        // Limpiar error mientras el usuario escribe
+        [nombre, apellido, email, tel, mensaje].forEach((campo) => {
+            campo?.addEventListener("input", () => {
+                if (campo.classList.contains("input-error")) {
+                    campo.classList.remove("input-error");
+                    const error = campo.parentElement.querySelector(".msg-error");
+                    if (error) error.remove();
+                }
+            });
+        });
+
+        // --- Validación al enviar ---
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const ok = [
+                validarNombre(nombre),
+                validarNombre(apellido),
+                validarEmail(email),
+                validarTel(tel),
+                validarMensaje(mensaje),
+            ].every(Boolean);
+
+            if (ok) {
+                mostrarExito();
+                form.reset();
+                [nombre, apellido, email, tel, mensaje].forEach((c) => {
+                    c?.classList.remove("input-ok");
+                });
+            }
+        });
+
+        // --- Mensaje de éxito ---
+
+        function mostrarExito() {
+            let banner = document.querySelector(".form-exito");
+            if (!banner) {
+                banner = document.createElement("p");
+                banner.classList.add("form-exito");
+                banner.textContent = "✅ ¡Mensaje enviado! Me voy a contactar pronto.";
+                form.insertAdjacentElement("afterend", banner);
+            }
+            banner.style.display = "block";
+            setTimeout(() => {
+                banner.style.display = "none";
+            }, 5000);
+        }
+    });
