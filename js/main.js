@@ -52,7 +52,7 @@ const pawCascade = () => {
         paw.style.setProperty('--paw-delay', `${Math.random() * 1.25}s`);
         paw.style.setProperty('--paw-duration', `${3.6 + Math.random() * 3.2}s`);
         paw.style.setProperty('--paw-rot', `${Math.round(Math.random() * 90 - 45)}deg`);
-        paw.style.setProperty('--paw-size', `${Math.round(14 + Math.random() * 18)}px`);
+        paw.style.setProperty('--paw-size', `${Math.round(22 + Math.random() * 16)}px`);
         paw.style.setProperty('--paw-drift', `${Math.round(Math.random() * 140 - 70)}px`);
         paw.style.setProperty('--paw-opacity', `${(0.45 + Math.random() * 0.40).toFixed(2)}`);
 

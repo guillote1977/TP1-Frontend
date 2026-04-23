@@ -943,6 +943,70 @@ body.dark-mode .site-header {
     font-size: 1.05rem;
 }
 
+.back-home {
+    position: fixed;
+    top: calc(14px + env(safe-area-inset-top));
+    left: calc(14px + env(safe-area-inset-left));
+    z-index: 10050;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(12px);
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.back-home__icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.18);
+    border: 1px solid rgba(99, 102, 241, 0.22);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.back-home__text {
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+.back-home:hover {
+    transform: translateY(-1px);
+    background-color: rgba(99, 102, 241, 0.14);
+    border-color: rgba(99, 102, 241, 0.22);
+}
+
+body.dark-mode .back-home {
+    background: rgba(17, 24, 39, 0.78);
+    border-color: rgba(231, 234, 243, 0.12);
+}
+
+body.dark-mode .back-home__icon {
+    background: rgba(99, 102, 241, 0.22);
+    border-color: rgba(99, 102, 241, 0.28);
+}
+
+body.page-braian .back-home {
+    background: rgba(11, 15, 26, 0.72);
+    border-color: rgba(0, 229, 255, 0.18);
+    color: var(--text);
+}
+
+body.page-mailen .back-home {
+    background: rgba(25, 5, 52, 0.72);
+    border-color: rgba(144, 87, 185, 0.25);
+    color: #e0e0e0;
+}
+
 #paw-rain {
     position: fixed;
     inset: 0;
@@ -1877,10 +1941,7 @@ body.dark-mode .card--mailen:focus-within h3::after {
     border: 1px solid rgba(15, 23, 42, 0.10);
     border-radius: 14px;
     box-shadow: var(--shadow);
-    padding: 1rem 1rem 1.1rem;
-    cursor: default;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    outline: none;
 }
 
 .roadmap-step::before {
@@ -1895,11 +1956,60 @@ body.dark-mode .card--mailen:focus-within h3::after {
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18), 0 0 0 9px rgba(99, 102, 241, 0.08);
 }
 
-.roadmap-step:hover,
-.roadmap-step:focus-visible {
+.roadmap-step:hover {
     transform: translateY(-2px);
     border-color: rgba(99, 102, 241, 0.35);
     box-shadow: 0 16px 35px rgba(15, 23, 42, 0.14);
+}
+
+.roadmap-step[open] {
+    border-color: rgba(99, 102, 241, 0.35);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.14);
+}
+
+.roadmap-summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem 3rem 1.1rem 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.roadmap-summary::-webkit-details-marker {
+    display: none;
+}
+
+.roadmap-summary::after {
+    content: "▾";
+    position: absolute;
+    right: 14px;
+    top: 18px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(15, 23, 42, 0.10);
+    color: rgba(15, 23, 42, 0.75);
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.roadmap-step[open] > .roadmap-summary::after {
+    transform: rotate(180deg);
+}
+
+.roadmap-summary:hover::after {
+    background: rgba(99, 102, 241, 0.14);
+    border-color: rgba(99, 102, 241, 0.22);
+}
+
+.roadmap-summary:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.55);
+    outline-offset: 4px;
+    border-radius: 14px;
 }
 
 .roadmap-date {
@@ -1914,64 +2024,36 @@ body.dark-mode .card--mailen:focus-within h3::after {
 }
 
 .roadmap-title {
-    margin: 0.65rem 0 0;
     font-size: 1.05rem;
     color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.25;
+    display: block;
 }
 
-.roadmap-tooltip {
-    position: absolute;
-    left: calc(100% + 14px);
-    top: 50%;
-    transform: translateY(-50%) translateX(-8px);
-    width: min(360px, 56vw);
-    padding: 0.8rem 0.9rem;
-    border-radius: 12px;
-    border: 1px solid rgba(15, 23, 42, 0.10);
-    background: rgba(255, 255, 255, 0.96);
-    color: #1f2937;
-    font-size: 0.93rem;
-    line-height: 1.4;
-    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    z-index: 5;
+.roadmap-content {
+    padding: 0 1rem 1rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    color: rgba(15, 23, 42, 0.78);
 }
 
-.roadmap-tooltip::before {
-    content: "";
-    position: absolute;
-    left: -7px;
-    top: 50%;
-    width: 12px;
-    height: 12px;
-    transform: translateY(-50%) rotate(45deg);
-    background: rgba(255, 255, 255, 0.96);
-    border-left: 1px solid rgba(15, 23, 42, 0.10);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.10);
-}
-
-.roadmap-step:hover .roadmap-tooltip,
-.roadmap-step:focus-visible .roadmap-tooltip {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0);
+.roadmap-content p {
+    margin-top: 0.85rem;
 }
 
 body.dark-mode .roadmap-step {
     border-color: rgba(231, 234, 243, 0.12);
 }
 
-body.dark-mode .roadmap-tooltip {
-    background: rgba(17, 24, 39, 0.96);
-    color: rgba(231, 234, 243, 0.93);
-    border-color: rgba(231, 234, 243, 0.14);
+body.dark-mode .roadmap-summary::after {
+    background: rgba(231, 234, 243, 0.08);
+    border-color: rgba(231, 234, 243, 0.12);
+    color: rgba(231, 234, 243, 0.86);
 }
 
-body.dark-mode .roadmap-tooltip::before {
-    background: rgba(17, 24, 39, 0.96);
-    border-left-color: rgba(231, 234, 243, 0.14);
-    border-bottom-color: rgba(231, 234, 243, 0.14);
+body.dark-mode .roadmap-content {
+    border-top-color: rgba(231, 234, 243, 0.10);
+    color: rgba(231, 234, 243, 0.78);
 }
 
 /* =========================================
@@ -2217,6 +2299,29 @@ body.dark-mode footer {
 
 /* Ajustes para móviles generales */
 @media (max-width: 768px) {
+    body.page-bitacora {
+        min-height: 100svh;
+        min-height: 100dvh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    body.page-bitacora main {
+        min-height: 0;
+        padding: 0.75rem 0 0;
+    }
+
+    body.page-bitacora .section.bitacora-container {
+        margin: 0 auto;
+        padding: 1.25rem 0 0.75rem;
+        border-bottom: 0;
+    }
+
+    body.page-bitacora footer {
+        margin-top: 0;
+        padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+
     .site-header {
         flex-direction: column;
         gap: 15px;
@@ -2235,5 +2340,30 @@ body.dark-mode footer {
     .footer-content {
         flex-direction: column;
         justify-content: center;
+    }
+
+    .roadmap {
+        padding-left: 2rem;
+    }
+
+    .roadmap::before {
+        left: 10px;
+    }
+
+    .roadmap-step::before {
+        left: -25px;
+    }
+
+    .roadmap-tooltip {
+        position: static;
+        margin-top: 0.75rem;
+        width: 100%;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .roadmap-tooltip::before {
+        display: none;
     }
 }
