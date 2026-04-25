@@ -99,6 +99,42 @@ body.page-braian main {
     padding: 0;
 }
 
+body.page-braian .album-carousel {
+    width: min(560px, 100%);
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 229, 255, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    background: rgba(11, 15, 26, 0.55);
+}
+
+body.page-braian .album-carousel .carousel-item {
+    min-height: clamp(260px, 62vw, 420px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.page-braian .album-carousel .album-cover {
+    width: auto;
+    height: auto;
+    max-width: 82%;
+    max-height: clamp(240px, 58vw, 380px);
+    border-radius: 16px;
+    object-fit: contain;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+body.page-braian .album-carousel .carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 18px 20px;
+    text-align: left;
+    background: linear-gradient(180deg, rgba(11, 15, 26, 0) 0%, rgba(11, 15, 26, 0.82) 72%, rgba(11, 15, 26, 0.92) 100%);
+}
+
 body.page-veronica {
     font-family: "EB Garamond", serif;
     font-size: 1.2rem;
