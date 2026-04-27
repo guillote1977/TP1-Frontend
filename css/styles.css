@@ -630,6 +630,11 @@ body.page-mailen .flex-tarjetas-discos {
     padding: 20px;
 }
 
+body.page-mailen #discos h2,
+body.page-mailen #discos .tarjeta p {
+    text-align: center;
+}
+
 body.page-mailen .tarjeta {
     background: rgb(219, 205, 225);
     color: #190534;
@@ -660,6 +665,8 @@ body.page-mailen .tarjeta img {
     border-radius: 6px;
     display: block
 }
+
+
 
 body.page-mailen #habilidades {
     padding: 3rem 1rem;
