@@ -300,7 +300,7 @@ body.page-veronica .peliculas-container {
 
 body.page-veronica .tarjeta,
 body.page-veronica .pelicula {
-    background-color: #bfd6d3;
+    background-color: rgba(191, 214, 211, 0.3);
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 20px;

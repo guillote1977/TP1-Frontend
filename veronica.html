@@ -212,9 +212,16 @@
         /*MENÚ HAMBURGUESA*/
         const boton = document.querySelector(".page-veronica .menu-toggle");
         const menu = document.querySelector(".page-veronica nav ul");
+        const links = document.querySelectorAll(".page-veronica nav ul li a");
 
         boton.addEventListener("click", () => {
             menu.classList.toggle("show");
+        });
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("show");
+            });
         });
 
         /*EFECTO FOTOS DE MASCOTAS*/
