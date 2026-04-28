@@ -29,6 +29,7 @@
         <!-- NAV: Barra de navegación principal -->
         <!--Pendientes: Implementar Menú hamburguesa con JS-->
         <nav>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="bitacora.html">Bitácora</a></li>
@@ -208,8 +209,16 @@
     </div>
 
     <script>
-        const imagenes = document.querySelectorAll("#mi-manada .mascota img");
+        /*MENÚ HAMBURGUESA*/
+        const boton = document.querySelector(".page-veronica .menu-toggle");
+        const menu = document.querySelector(".page-veronica nav ul");
 
+        boton.addEventListener("click", () => {
+            menu.classList.toggle("show");
+        });
+
+        /*EFECTO FOTOS DE MASCOTAS*/
+        const imagenes = document.querySelectorAll("#mi-manada .mascota img");
         imagenes.forEach(img => {
             img.addEventListener("click", () => {
                 const patita = document.createElement("span");
